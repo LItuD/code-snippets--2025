@@ -1,0 +1,12 @@
+function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading) return;
+
+    if (newValue == 'true') {
+        // Show the Accessories field
+        g_form.setDisplay('accessories', true);
+    } else {
+        // Hide and clear the Accessories field
+        g_form.setDisplay('accessories', false);
+        g_form.clearValue('accessories');
+    }
+}
